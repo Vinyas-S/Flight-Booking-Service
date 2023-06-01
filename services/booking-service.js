@@ -95,7 +95,21 @@ async function cancelBooking(bookingId){
         await transaction.rollback();
     }
 }
+
+async function cancelOldBookings(){
+
+    try {
+        console.log("inside service")
+        const time = new Date(Date.now() - 1000 * 300); // time 5 minutes ago
+        const response = await bookingRepository.cancelOldBookings(time);
+        return response;
+    } catch (error) {
+        console.log(error);
+    }
+}
 module.exports = {
     createBooking,
     makePayment,
+    cancelOldBookings,
+    cancelBooking,
 }
