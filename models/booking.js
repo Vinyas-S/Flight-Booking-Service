@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Booking.init({
-    flight_id: {
+    flightId: {
       type: DataTypes.INTEGER,
       allowNull:false
     },
