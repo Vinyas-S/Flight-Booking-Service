@@ -10,5 +10,4 @@ function scheduleCrons(){
     }) 
 }
 
-
-module.exports = scheduleCrons
+module.exports = scheduleCrons;
