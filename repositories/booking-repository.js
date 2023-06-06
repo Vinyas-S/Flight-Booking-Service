@@ -4,6 +4,7 @@ const {Booking} = require('../models');
 const CrudRepository= require('./crud-repository');
 const {Op} = require('sequelize');
 
+const AppError = require('../utils/errors/app-error')
 
 const {Enums} = require('../utils/common');
 
